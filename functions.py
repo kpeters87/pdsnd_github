@@ -109,6 +109,7 @@ def popular_time(df):
                     display the most common day of week and 
                     display the most common start hour
     """
+    #  create a dictionary whit list associating numbers to the months
     list_month_dict = dict(enumerate(list_month))
     list_days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday','Sunday']
     list_days_dict = dict(enumerate(list_days))
