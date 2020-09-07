@@ -1,0 +1,6 @@
+*.csv
+bikeshare_2.py
+Project.zip
+.vscode
+/.idea
+__pycache__
