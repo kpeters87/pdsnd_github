@@ -2,7 +2,6 @@ import pandas as pd
 import time
 
 import functions as fc
-import trip_duration as td
 import user_stats as usta
 
 print("Hello Welcome to BikeShare data")
@@ -25,7 +24,7 @@ while test != 'q':
     start_time = time.time()
     fc.popular_time(df)
     fc.station_stats(df)
-    td.trip_duration_stats(df,user_month, user_day)
+    fc.trip_duration_stats(df,user_month, user_day)
     usta.user_stats(df)
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-' * 40)
