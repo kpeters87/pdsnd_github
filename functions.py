@@ -1,5 +1,4 @@
 import pandas as pd
-import datetime
 
 CITY_DATA = { 'Chicago': 'chicago.csv',
               'New York City': 'new_york_city.csv',
@@ -133,7 +132,6 @@ def popular_time(df):
     print(group_hour.sort_values('count',ascending=False).head(5).to_string())
 
 def station_stats(df):
-
     """
     This functions get the filtered dataframe and print the desired questions
     Args:
