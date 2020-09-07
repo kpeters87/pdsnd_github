@@ -116,3 +116,15 @@ def station_stats(df):
     print(group_Start_end_station.sort_values('count', ascending=False).head(5).to_string())
 
     print('-' * 40)
+
+def trip_duration_stats(df, user_month, user_day):
+
+    # display total travel time
+    df['Time Difference'] = pd.to_datetime(df['End Time']) - pd.to_datetime(df['Start Time'])
+    print("The total travel time for {}, selecting {} is: {}".format(user_month, user_day, df['Time Difference'].sum()))
+    print('-' * 20)
+    # display mean travel time
+
+    print("The mean travel time for {}, selecting {} is: {}".format(user_month, user_day, str(df['Time Difference'].mean()).split(".")[0]))
+
+    print('-'*40)
