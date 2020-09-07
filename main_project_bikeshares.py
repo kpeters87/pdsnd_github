@@ -2,7 +2,6 @@ import pandas as pd
 import time
 
 import functions as fc
-import user_selections as usel
 import popular_time as pt
 import station_stats as st
 import trip_duration as td
@@ -16,9 +15,9 @@ test = ''
 while test != 'q':
     while True:  # This loop make sure that the dataframe is not empty
         #  call function to help the selection of cites month e days
-        user_city = usel.user_sections('cities')
-        user_month = usel.user_sections('month')
-        user_day = usel.user_sections('days')
+        user_city = fc.user_sections('cities')
+        user_month = fc.user_sections('month')
+        user_day = fc.user_sections('days')
         df = fc.city(user_city)
         df = fc.filter(df, user_month, user_day)
         if isinstance(df, pd.DataFrame):
