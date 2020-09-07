@@ -11,7 +11,7 @@ def user_sections(type_of_selection):
     """
     This function is responsible to catch what the user want to pass to the next functions
     Args:
-    (str) type_of_selection - This functions ask the user adpting to 3 types os inputs: cities, month, days
+    (str) type_of_selection - This functions ask the user adpting to 3 types os inputs: cities, month, days and raw
                               each one gets the proper list and provide questions to user
     Return:
     (str) test - The result of the test of the question to user, if its valid it passes as resultf from function
