@@ -1,10 +1,22 @@
+import pandas as pd
+import datetime
     """
     This file has a function to get together all created functions for the project.
-
-    Args:
-        (str) city - name of the city to analyze
-        (str) month - name of the month to filter by, or "all" to apply no month filter
-        (str) day - name of the day of week to filter by, or "all" to apply no day filter
-    Returns:
-        df - Pandas DataFrame containing city data filtered by month and day
     """
+CITY_DATA = { 'Chicago': 'chicago.csv',
+              'New York City': 'new_york_city.csv',
+              'Washington': 'washington.csv' }
+def city(city_index):
+    """
+    This function get user choosen city and retrive the dataframe.
+    Args:
+        (str) city_index - name of the city to analyze
+    Returns:
+        df - Pandas DataFrame containing city data whit 3 new collums Month, Week_day and Hour
+    """
+    df = pd.read_csv(CITY_DATA[city_index])
+    df['month'] = pd.DatetimeIndex(df['Start Time']).month
+    df['week_day'] = pd.DatetimeIndex(df['Start Time']).weekday
+    df['hour'] = pd.DatetimeIndex(df['Start Time']).hour
+    return df
+
