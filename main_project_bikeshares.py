@@ -9,7 +9,7 @@ import station_stats as st
 import trip_duration as td
 import user_stats as usta
 
-
+print("Hello Welcome to BikeShare data")
 # list the cites to make easy to avoid typing error
 cites = ['Chicago', 'New York City', 'Washington']
 # Call a list to show the selection and keep to avoid problems
