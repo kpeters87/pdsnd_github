@@ -79,7 +79,7 @@ def filter(df, month, day):
     return df
 
 def popular_time(df):
-    
+
     list_month_dict = dict(enumerate(list_month))
     list_days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday','Sunday']
     list_days_dict = dict(enumerate(list_days))
@@ -101,3 +101,18 @@ def popular_time(df):
     group_hour.set_index('hour')
     group_hour.set_index('hour',inplace=True)
     print(group_hour.sort_values('count',ascending=False).head(5).to_string())
+
+def station_stats(df):
+
+
+    # display most commonly used start station df.groupby('month').size().to_frame(name='count').reset_index()
+    group_start_station = df.groupby('Start Station').size().to_frame(name='count')
+    print(group_start_station.sort_values('count', ascending=False).head(5).to_string())
+    # display most commonly used end station
+    group_end_station = df.groupby('End Station').size().to_frame(name='count')
+    print(group_end_station.sort_values('count', ascending=False).head(5).to_string())
+    # display most frequent combination of start station and end station trip
+    group_Start_end_station = df.groupby(['Start Station', 'End Station']).size().to_frame(name='count')
+    print(group_Start_end_station.sort_values('count', ascending=False).head(5).to_string())
+
+    print('-' * 40)
