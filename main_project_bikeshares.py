@@ -2,7 +2,6 @@ import pandas as pd
 import time
 
 import functions as fc
-import filter as ft
 import user_selections as usel
 import popular_time as pt
 import station_stats as st
@@ -21,7 +20,7 @@ while test != 'q':
         user_month = usel.user_sections('month')
         user_day = usel.user_sections('days')
         df = fc.city(user_city)
-        df = ft.filter(df, user_month, user_day)
+        df = fc.filter(df, user_month, user_day)
         if isinstance(df, pd.DataFrame):
             break
         else:
