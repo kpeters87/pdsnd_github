@@ -1,15 +1,15 @@
 ### Date created
-Include the date you created this project and README file.
+This project was created in September 2020.
 
 ### Project Title
-Replace the Project Title
+This project is called Explore Bikeshares
 
 ### Description
-Describe what your project is about and what it does
+This project is part of a Udacity Nano-degree.
 
 ### Files used
-Include the files used
+It's used tree .csv files with a large set of information about a bikeshare company
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+Most part of the project was made searching for documentations from Pandas, Python and Numpy.
+When faced some problems, mostly code errors, I search at StackOverFlow for some solutions.
