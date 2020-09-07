@@ -1,8 +1,6 @@
 import pandas as pd
 import datetime
-    """
-    This file has a function to get together all created functions for the project.
-    """
+
 CITY_DATA = { 'Chicago': 'chicago.csv',
               'New York City': 'new_york_city.csv',
               'Washington': 'washington.csv' }
