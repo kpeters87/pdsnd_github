@@ -2,7 +2,6 @@ import pandas as pd
 import time
 
 import functions as fc
-import user_stats as usta
 
 print("Hello Welcome to BikeShare data")
 # list the cites to make easy to avoid typing error
@@ -25,7 +24,7 @@ while test != 'q':
     fc.popular_time(df)
     fc.station_stats(df)
     fc.trip_duration_stats(df,user_month, user_day)
-    usta.user_stats(df)
+    fc.user_stats(df)
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-' * 40)
     test = input("Press q to exit, or something else to explore again:")
