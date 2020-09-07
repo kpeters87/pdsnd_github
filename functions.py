@@ -19,6 +19,15 @@ def city(city_index):
     return df
 
 def filter(df, month, day):
+    """
+    This functions get the info provided about filtering data from user and set the dataframe filtered at the end
+    Args:
+    (DataFrame) df - dataframe provided from cities function
+    (str) month - Month name with first three words or All month.
+    (str) day - Week day full name or All Days.
+    Returns:
+    (df) Pandas DataFrame - DataFrame filtered with choosen data from user
+    """
     list_month = ['All month', 'Jan', 'Fev', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     list_days = ['All days', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
     s_month = list_month.index(month)
