@@ -1,5 +1,4 @@
 import pandas as pd
-import datetime
 
 CITY_DATA = { 'Chicago': 'chicago.csv',
               'New York City': 'new_york_city.csv',
