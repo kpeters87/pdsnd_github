@@ -4,7 +4,7 @@ import time
 import functions as fc
 
 print("Hello Welcome to BikeShare data")
-# list the cites to make easy to avoid typing error
+# list the cites in that way the user doesn't need to type it.
 cites = ['Chicago', 'New York City', 'Washington']
 # Call a list to show the selection and keep to avoid problems
 test = ''
