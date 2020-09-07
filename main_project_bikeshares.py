@@ -2,7 +2,6 @@ import pandas as pd
 import time
 
 import functions as fc
-import popular_time as pt
 import station_stats as st
 import trip_duration as td
 import user_stats as usta
@@ -25,7 +24,7 @@ while test != 'q':
         else:
             print(df)
     start_time = time.time()
-    pt.popular_time(df)
+    fc.popular_time(df)
     st.station_stats(df)
     td.trip_duration_stats(df,user_month, user_day)
     usta.user_stats(df)
