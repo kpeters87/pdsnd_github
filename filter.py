@@ -27,15 +27,11 @@ if __name__ == "__main__":
     head_size = 3
     df = ct.city("Chicago")
     df = filter(df, 'All month', 'All days' )
-    if not isinstance(df, pd.DataFrame):
-        print('é')
-    else:
-        print('nao é ')
     print(df)
 
-    # df = ct.city(2)
-    # df = filter(df, 3, 2 )
-    # print(df.head(head_size))
+    df = ct.city("New York City")
+    df = filter(df, 'Jan', 'Sunday')
+    print(df.head(head_size))
     #
     # df = ct.city(3)
     # df = filter(df, 3, 2 )
